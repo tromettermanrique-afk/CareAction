@@ -2119,11 +2119,17 @@
     }
 
     function buildVoiceSummary(task, elder) {
-      const firstStep = task.steps[0] || task.mainAction;
+      const shorten = (text, max) => text
+        .replace(/[“”]/g, "")
+        .replace(/[。；;]/g, "，")
+        .slice(0, max)
+        .replace(/[，、\s]+$/g, "");
+      const firstStep = shorten(task.steps[0] || task.mainAction, 34);
+      const script = shorten(task.script, 38);
       const safety = task.safetyLevel === "high"
-        ? "这条建议需要人工确认，遇到异常马上按机构流程。"
-        : "如果出现异常，停止执行并按机构流程处理。";
-      return `${elder.name}，${task.title}。先做：${task.mainAction} 第一步：${firstStep} 话术可以直接照着说。${safety}`;
+        ? "需人工确认，异常马上按流程。"
+        : "异常就停，按机构流程。";
+      return `${elder.name}，${task.title}。先做：${firstStep}。照着说：${script}。${safety}`;
     }
 
     function renderActionVoice() {
@@ -2256,7 +2262,13 @@
     }
 
     $$(".nav-button[data-view], .primary-button[data-view], .secondary-button[data-view], .ghost-button[data-view]").forEach((button) => {
-      button.addEventListener("click", () => switchView(button.dataset.view));
+      button.addEventListener("click", () => {
+        if (button.dataset.autoplay === "voice") {
+          state.actionVoicePlaying = true;
+          renderActionVoice();
+        }
+        switchView(button.dataset.view);
+      });
     });
 
     $("#playActionVoice").addEventListener("click", () => {
