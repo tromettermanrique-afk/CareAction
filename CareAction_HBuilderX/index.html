@@ -2362,6 +2362,1184 @@
         padding: 12px;
       }
     }
+
+    /* CareEcho-style caregiver refresh */
+    #caregiverShell:not(.hidden) {
+      display: block;
+      min-height: 100vh;
+      background: #f0f2f5;
+    }
+
+    #caregiverShell .sidebar {
+      display: none;
+    }
+
+    #caregiverShell .main {
+      width: min(640px, 100%);
+      min-height: 100vh;
+      margin: 0 auto;
+      padding: 0 14px 98px;
+    }
+
+    #caregiverShell .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      margin: 0 -14px;
+      padding: 12px 14px;
+      color: #1a1a2e;
+      background: #fff;
+      border: 0;
+      border-bottom: 1px solid #e2e8f0;
+      border-radius: 0;
+      box-shadow: none;
+    }
+
+    #caregiverShell .topbar h1 {
+      margin: 0;
+      color: #2d3748;
+      font-size: 23px;
+      line-height: 1.12;
+      letter-spacing: 0;
+    }
+
+    #caregiverShell .topbar p {
+      margin: 3px 0 0;
+      color: #718096;
+      font-size: 14px;
+      line-height: 1.2;
+    }
+
+    #caregiverShell .topbar-actions {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 8px;
+      width: auto;
+      flex: 0 0 auto;
+      flex-wrap: nowrap;
+    }
+
+    #caregiverShell #topSync,
+    #caregiverShell #simulatePending {
+      display: none;
+    }
+
+    .caregiver-staff-toggle {
+      display: flex;
+      flex: 0 0 auto;
+      gap: 2px;
+      min-height: 40px;
+      padding: 4px;
+      color: #4a5568;
+      background: #f7fafc;
+      border: 2px solid #e2e8f0;
+      border-radius: 20px;
+      cursor: pointer;
+    }
+
+    .caregiver-staff-toggle span {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 52px;
+      padding: 5px 10px;
+      border-radius: 16px;
+      font-size: 14px;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .caregiver-staff-toggle span.active {
+      color: #fff;
+      background: #3182ce;
+    }
+
+    .caregiver-handover-button {
+      flex: 0 0 auto;
+      min-height: 40px;
+      padding: 8px 12px;
+      color: #3182ce;
+      background: #ebf8ff;
+      border: 0;
+      border-radius: 20px;
+      font-size: 15px;
+      font-weight: 900;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+
+    #caregiverLogoutButton {
+      width: auto;
+      min-height: 40px;
+      padding: 8px 12px;
+      color: #5d6d75;
+      background: #fff;
+      border: 1px solid #e2e8f0;
+      border-radius: 20px;
+      font-size: 15px;
+      font-weight: 900;
+      white-space: nowrap;
+    }
+
+    #caregiverShell .content {
+      padding: 14px 0 0;
+    }
+
+    #view-today .dashboard-grid {
+      display: block;
+    }
+
+    #view-today .dashboard-grid > .section-panel {
+      padding: 0;
+      background: transparent;
+      border: 0;
+      box-shadow: none;
+    }
+
+    #view-today .section-heading {
+      align-items: center;
+      margin: 4px 0 10px;
+      padding: 0 4px;
+    }
+
+    #view-today .section-heading h2 {
+      color: #4a5568;
+      font-size: 21px;
+    }
+
+    #view-today .section-heading p,
+    #view-today .status-grid {
+      display: none;
+    }
+
+    .task-list {
+      display: grid;
+      gap: 12px;
+    }
+
+    .operator-card {
+      display: grid;
+      gap: 13px;
+      padding: 16px;
+      color: #1a1a2e;
+      background: #fff;
+      border: 1px solid rgba(226, 232, 240, 0.88);
+      border-radius: 14px;
+      box-shadow: 0 1px 5px rgba(0, 0, 0, 0.07);
+    }
+
+    .operator-card:active {
+      transform: scale(0.995);
+    }
+
+    .operator-topline,
+    .operator-footer-line {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      color: #718096;
+      font-size: 16px;
+      font-weight: 800;
+      line-height: 1.25;
+    }
+
+    .operator-person {
+      display: grid;
+      grid-template-columns: 58px 1fr;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .operator-avatar {
+      display: grid;
+      place-items: center;
+      width: 58px;
+      height: 58px;
+      color: #2d3748;
+      background: #edf2f7;
+      border: 0;
+      border-radius: 50%;
+      font-size: 28px;
+      font-weight: 900;
+    }
+
+    .operator-person h2 {
+      margin: 0 0 3px;
+      color: #1a1a2e;
+      font-size: clamp(32px, 8vw, 42px);
+      line-height: 1.08;
+      letter-spacing: 0;
+    }
+
+    .operator-person p {
+      margin: 0;
+      color: #718096;
+      font-size: 18px;
+      font-weight: 800;
+      line-height: 1.25;
+    }
+
+    .operator-action {
+      display: grid;
+      gap: 7px;
+      padding: 14px 15px;
+      color: #2d3748;
+      background: #ebf8ff;
+      border-left: 5px solid #3182ce;
+      border-radius: 10px;
+    }
+
+    .operator-action span {
+      color: #3182ce;
+      font-size: 16px;
+      font-weight: 900;
+    }
+
+    .operator-action strong {
+      color: #1a1a2e;
+      font-size: clamp(26px, 7vw, 34px);
+      line-height: 1.18;
+      letter-spacing: 0;
+    }
+
+    .operator-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+    }
+
+    .operator-mini-card {
+      display: grid;
+      gap: 8px;
+      padding: 13px 14px;
+      color: #2d3748;
+      background: #f7fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 10px;
+    }
+
+    .operator-mini-card h3 {
+      margin: 0;
+      color: #4a5568;
+      font-size: 17px;
+      line-height: 1.2;
+    }
+
+    .operator-mini-card p,
+    .operator-mini-card li {
+      margin: 0;
+      color: #1a1a2e;
+      font-size: 21px;
+      line-height: 1.38;
+      font-weight: 800;
+    }
+
+    .operator-mini-card ol {
+      margin: 0;
+      padding-left: 1.25em;
+    }
+
+    .operator-safety {
+      display: grid;
+      grid-template-columns: 40px 1fr;
+      gap: 10px;
+      align-items: center;
+      padding: 12px;
+      color: #9a661e;
+      background: #fffaf0;
+      border: 1px solid #f5e6c8;
+      border-left: 5px solid #dd6b20;
+      border-radius: 10px;
+      font-size: 19px;
+      font-weight: 900;
+      line-height: 1.35;
+    }
+
+    .operator-safety span {
+      display: grid;
+      place-items: center;
+      width: 34px;
+      height: 34px;
+      color: #fff;
+      background: #dd6b20;
+      border-radius: 50%;
+    }
+
+    .operator-safety.high {
+      color: #a23835;
+      background: #fff5f5;
+      border-color: #f6d8d6;
+      border-left-color: #e53e3e;
+    }
+
+    .operator-safety.high span {
+      background: #e53e3e;
+    }
+
+    .operator-card .warm-note {
+      padding: 12px 13px;
+      color: #805247;
+      background: #f9ece9;
+      border: 0;
+      border-left: 5px solid #d7a19a;
+      border-radius: 10px;
+      font-size: 20px;
+      line-height: 1.35;
+    }
+
+    .operator-newbie-note {
+      padding: 12px 13px;
+      color: #2b6cb0;
+      background: #ebf8ff;
+      border-radius: 10px;
+      font-size: 18px;
+      font-weight: 800;
+      line-height: 1.42;
+    }
+
+    .operator-actions {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 9px;
+      align-items: stretch;
+    }
+
+    .operator-actions button {
+      min-height: 56px;
+      padding: 10px;
+      border-radius: 12px;
+      font-size: 19px;
+      font-weight: 900;
+      line-height: 1.18;
+    }
+
+    .operator-next {
+      color: #a0aec0;
+      font-size: 15px;
+      text-align: right;
+    }
+
+    .caregiver-bottom-nav {
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 110;
+      display: flex;
+      justify-content: center;
+      gap: 0;
+      padding: 6px 0 max(6px, env(safe-area-inset-bottom));
+      background: #fff;
+      border-top: 1px solid #e2e8f0;
+      box-shadow: 0 -8px 22px rgba(7, 57, 79, 0.08);
+    }
+
+    .mobile-nav.caregiver-bottom-nav:not(.hidden) {
+      display: flex !important;
+    }
+
+    .caregiver-bottom-nav.hidden {
+      display: none !important;
+    }
+
+    .caregiver-bottom-nav .nav-button {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 2px;
+      width: min(180px, 50vw);
+      min-height: 54px;
+      padding: 6px 20px;
+      color: #718096;
+      background: transparent;
+      border: 0;
+      border-radius: 0;
+      font-size: 14px;
+      font-weight: 800;
+      cursor: pointer;
+    }
+
+    .caregiver-bottom-nav .nav-button.active {
+      color: #3182ce;
+      background: transparent;
+      box-shadow: none;
+      transform: none;
+    }
+
+    .caregiver-bottom-nav .nav-icon {
+      display: block;
+      width: auto;
+      height: auto;
+      color: inherit;
+      background: transparent;
+      font-size: 24px;
+      font-weight: 900;
+      line-height: 1;
+    }
+
+    .caregiver-page-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin: 4px 4px 12px;
+    }
+
+    .caregiver-page-head h2 {
+      margin: 0;
+      color: #4a5568;
+      font-size: 22px;
+      line-height: 1.2;
+    }
+
+    .caregiver-page-head p {
+      margin: 2px 0 0;
+      color: #718096;
+      font-size: 15px;
+    }
+
+    .caregiver-elder-list {
+      display: grid;
+      gap: 12px;
+    }
+
+    .caregiver-elder-card {
+      display: grid;
+      gap: 11px;
+      padding: 16px;
+      background: #fff;
+      border: 1px solid #e2e8f0;
+      border-radius: 14px;
+      box-shadow: 0 1px 5px rgba(0, 0, 0, 0.06);
+      cursor: pointer;
+    }
+
+    .caregiver-elder-head {
+      display: grid;
+      grid-template-columns: 50px 1fr;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .caregiver-elder-avatar {
+      display: grid;
+      place-items: center;
+      width: 50px;
+      height: 50px;
+      color: #fff;
+      background: #07394f;
+      border-radius: 50%;
+      font-size: 23px;
+      font-weight: 900;
+    }
+
+    .caregiver-elder-card h3 {
+      margin: 0 0 2px;
+      color: #1a1a2e;
+      font-size: 24px;
+      line-height: 1.15;
+    }
+
+    .caregiver-elder-card p {
+      margin: 0;
+      color: #718096;
+      font-size: 16px;
+      line-height: 1.35;
+    }
+
+    .caregiver-elder-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+    }
+
+    .caregiver-elder-tag {
+      padding: 5px 10px;
+      color: #4a5568;
+      background: #f7fafc;
+      border-radius: 8px;
+      font-size: 15px;
+      font-weight: 800;
+      line-height: 1.2;
+    }
+
+    .caregiver-elder-tag.caution {
+      color: #a23835;
+      background: #fff5f5;
+    }
+
+    .caregiver-drawer-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 260;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      background: rgba(0, 0, 0, 0.44);
+    }
+
+    .caregiver-drawer-overlay.hidden {
+      display: none !important;
+    }
+
+    .caregiver-drawer {
+      width: min(640px, 100%);
+      max-height: 86vh;
+      overflow-y: auto;
+      padding: 22px 18px max(26px, env(safe-area-inset-bottom));
+      background: #fff;
+      border-radius: 22px 22px 0 0;
+      box-shadow: 0 -20px 44px rgba(0, 0, 0, 0.18);
+    }
+
+    .caregiver-drawer-head {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+
+    .caregiver-drawer-title {
+      margin: 0;
+      color: #1a1a2e;
+      font-size: 27px;
+      line-height: 1.12;
+    }
+
+    .caregiver-drawer-subtitle {
+      margin: 5px 0 0;
+      color: #718096;
+      font-size: 16px;
+    }
+
+    .drawer-close-button {
+      width: 42px;
+      height: 42px;
+      color: #4a5568;
+      background: #edf2f7;
+      border: 0;
+      border-radius: 50%;
+      font-size: 20px;
+      font-weight: 900;
+      cursor: pointer;
+    }
+
+    .drawer-section {
+      display: grid;
+      gap: 8px;
+      margin-top: 14px;
+      padding: 14px;
+      background: #f7fafc;
+      border-radius: 12px;
+    }
+
+    .drawer-section h3 {
+      margin: 0;
+      color: #4a5568;
+      font-size: 18px;
+    }
+
+    .drawer-section p,
+    .drawer-section li {
+      color: #2d3748;
+      font-size: 18px;
+      line-height: 1.5;
+    }
+
+    .drawer-section ul {
+      margin: 0;
+      padding-left: 1.2em;
+    }
+
+    .handover-record-area {
+      display: grid;
+      justify-items: center;
+      gap: 12px;
+      padding: 18px 0 12px;
+      text-align: center;
+    }
+
+    .handover-mic-button {
+      display: grid;
+      place-items: center;
+      width: 82px;
+      height: 82px;
+      color: #fff;
+      background: #e53e3e;
+      border: 0;
+      border-radius: 50%;
+      box-shadow: 0 8px 20px rgba(229, 62, 62, 0.28);
+      font-size: 30px;
+      font-weight: 900;
+      cursor: pointer;
+    }
+
+    .handover-mic-button.recording {
+      animation: micPulse 1.2s infinite;
+      background: #c53030;
+    }
+
+    @keyframes micPulse {
+      0%,
+      100% {
+        box-shadow: 0 0 0 0 rgba(229, 62, 62, 0.38);
+      }
+
+      50% {
+        box-shadow: 0 0 0 16px rgba(229, 62, 62, 0);
+      }
+    }
+
+    .handover-hint {
+      color: #718096;
+      font-size: 18px;
+      line-height: 1.45;
+    }
+
+    .handover-form {
+      display: grid;
+      gap: 10px;
+    }
+
+    .handover-form select,
+    .handover-form textarea {
+      width: 100%;
+      padding: 13px;
+      color: #1a1a2e;
+      background: #fff;
+      border: 2px solid #e2e8f0;
+      border-radius: 10px;
+      font: inherit;
+      font-size: 18px;
+    }
+
+    .handover-form textarea {
+      min-height: 96px;
+      resize: vertical;
+    }
+
+    .handover-saved-list {
+      display: grid;
+      gap: 8px;
+      margin-top: 12px;
+    }
+
+    .handover-saved-item {
+      padding: 10px 12px;
+      color: #2d3748;
+      background: #f0fff4;
+      border-radius: 10px;
+      font-size: 16px;
+      line-height: 1.35;
+    }
+
+    @media (min-width: 720px) {
+      .operator-grid {
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      }
+    }
+
+    @media (max-width: 520px) {
+      #caregiverShell .topbar {
+        align-items: flex-start;
+      }
+
+      #caregiverShell .topbar-actions {
+        gap: 6px;
+      }
+
+      .caregiver-staff-toggle span {
+        min-width: 44px;
+        padding: 5px 8px;
+      }
+
+      .caregiver-handover-button,
+      #caregiverLogoutButton {
+        padding: 8px 10px;
+        font-size: 14px;
+      }
+
+      .operator-actions {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* CareEcho-style family and admin refresh */
+    .family-shell:not(.hidden),
+    .admin-shell:not(.hidden) {
+      display: block;
+      min-height: 100vh;
+      color: #1a1a2e;
+      background: #f0f2f5;
+    }
+
+    .family-topbar,
+    .admin-topbar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 12px max(14px, calc((100vw - 640px) / 2 + 14px));
+      color: #1a1a2e;
+      background: #fff;
+      border-bottom: 1px solid #e2e8f0;
+      box-shadow: none;
+    }
+
+    .admin-topbar {
+      padding-right: max(14px, calc((100vw - 1180px) / 2 + 14px));
+      padding-left: max(14px, calc((100vw - 1180px) / 2 + 14px));
+    }
+
+    .family-topbar h1,
+    .admin-topbar h1 {
+      margin: 0;
+      color: #2d3748;
+      font-size: clamp(23px, 5vw, 30px);
+      line-height: 1.12;
+      letter-spacing: 0;
+    }
+
+    .family-topbar p,
+    .admin-topbar p {
+      margin: 3px 0 0;
+      max-width: 640px;
+      color: #718096;
+      font-size: 15px;
+      line-height: 1.28;
+    }
+
+    .family-topbar .ghost-button,
+    .admin-topbar .ghost-button,
+    .admin-actions .ghost-button {
+      width: auto;
+      min-height: 40px;
+      padding: 8px 12px;
+      color: #5d6d75;
+      background: #fff;
+      border: 1px solid #e2e8f0;
+      border-radius: 20px;
+      font-size: 15px;
+      font-weight: 900;
+      white-space: nowrap;
+    }
+
+    .family-content {
+      width: min(640px, 100%);
+      margin: 0 auto;
+      padding: 14px 14px 34px;
+      display: grid;
+      gap: 12px;
+    }
+
+    .family-hero {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
+
+    .family-card {
+      display: grid;
+      gap: 10px;
+      padding: 16px;
+      background: #fff;
+      border: 1px solid #e2e8f0;
+      border-radius: 14px;
+      box-shadow: 0 1px 5px rgba(0, 0, 0, 0.06);
+    }
+
+    .family-card h2,
+    .family-card h3 {
+      margin: 0;
+      color: #1a1a2e;
+      font-size: 24px;
+      line-height: 1.16;
+      letter-spacing: 0;
+    }
+
+    .family-card p {
+      margin: 0;
+      color: #4a5568;
+      font-size: 18px;
+      line-height: 1.45;
+    }
+
+    .family-photo-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 8px;
+      margin-top: 2px;
+    }
+
+    .family-photo-grid img {
+      width: 100%;
+      aspect-ratio: 1;
+      object-fit: cover;
+      border-radius: 12px;
+    }
+
+    .comment-list {
+      display: grid;
+      gap: 8px;
+      margin-top: 0;
+    }
+
+    .comment-item {
+      padding: 12px;
+      color: #2d3748;
+      background: #f7fafc;
+      border: 1px solid #e2e8f0;
+      border-left: 5px solid #38a169;
+      border-radius: 10px;
+      font-size: 17px;
+      line-height: 1.42;
+    }
+
+    .comment-item p {
+      margin-top: 6px;
+    }
+
+    .comment-form,
+    .family-story-form {
+      display: grid;
+      gap: 10px;
+      margin-top: 0;
+    }
+
+    .comment-form textarea,
+    .family-story-form textarea {
+      min-height: 96px;
+      padding: 13px;
+      color: #1a1a2e;
+      background: #fff;
+      border: 2px solid #e2e8f0;
+      border-radius: 10px;
+      font: inherit;
+      font-size: 18px;
+      line-height: 1.45;
+      resize: vertical;
+    }
+
+    .family-card .primary-button,
+    .family-story-form .primary-button,
+    .comment-form .primary-button {
+      min-height: 52px;
+      border-radius: 12px;
+      font-size: 19px;
+      font-weight: 900;
+    }
+
+    .family-confirm-actions {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 8px;
+      margin-top: 10px;
+    }
+
+    .family-confirm-actions button {
+      min-width: 0;
+      min-height: 44px;
+      padding: 8px;
+      font-size: 16px;
+      border-radius: 10px;
+    }
+
+    .admin-eyebrow {
+      display: inline-flex;
+      margin-bottom: 4px;
+      padding: 5px 9px;
+      color: #3182ce;
+      background: #ebf8ff;
+      border: 0;
+      border-radius: 16px;
+      font-size: 13px;
+      font-weight: 900;
+    }
+
+    .admin-actions {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 8px;
+      flex-wrap: nowrap;
+      flex: 0 0 auto;
+    }
+
+    .admin-actions .primary-button {
+      width: auto;
+      min-width: 112px;
+      min-height: 40px;
+      padding: 8px 13px;
+      border-radius: 20px;
+      font-size: 15px;
+      font-weight: 900;
+      white-space: nowrap;
+    }
+
+    .admin-content {
+      width: min(1180px, 100%);
+      margin: 0 auto;
+      padding: 14px 14px 38px;
+      display: grid;
+      gap: 12px;
+    }
+
+    .admin-hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr);
+      gap: 12px;
+      margin-bottom: 0;
+    }
+
+    .admin-hero > div:first-child,
+    .admin-metric-grid,
+    .admin-roster-panel,
+    .admin-panel {
+      background: #fff;
+      border: 1px solid #e2e8f0;
+      border-radius: 14px;
+      box-shadow: 0 1px 5px rgba(0, 0, 0, 0.06);
+    }
+
+    .admin-hero > div:first-child {
+      padding: 16px;
+      display: grid;
+      gap: 8px;
+      align-content: center;
+    }
+
+    .admin-hero h2,
+    .admin-roster-panel h2,
+    .admin-panel h2 {
+      margin: 0;
+      color: #1a1a2e;
+      font-size: 24px;
+      line-height: 1.16;
+      letter-spacing: 0;
+    }
+
+    .admin-hero p,
+    .admin-roster-panel p,
+    .admin-panel p {
+      margin: 0;
+      color: #718096;
+      font-size: 17px;
+      line-height: 1.42;
+    }
+
+    .admin-metric-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 1px;
+      overflow: hidden;
+      background: #e2e8f0;
+    }
+
+    .admin-metric {
+      display: grid;
+      gap: 7px;
+      min-height: 94px;
+      padding: 16px 14px;
+      background: #fff;
+    }
+
+    .admin-metric span {
+      color: #718096;
+      font-size: 15px;
+      font-weight: 900;
+    }
+
+    .admin-metric strong {
+      color: #1a1a2e;
+      font-size: 38px;
+      line-height: 1;
+    }
+
+    .admin-roster-panel {
+      padding: 16px;
+    }
+
+    .admin-panel-head {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+
+    .admin-roster {
+      display: grid;
+      gap: 12px;
+    }
+
+    .admin-elder-row {
+      display: grid;
+      grid-template-columns: minmax(210px, 0.72fr) minmax(300px, 1.14fr) minmax(240px, 0.92fr) minmax(240px, 0.92fr);
+      gap: 12px;
+      align-items: stretch;
+      padding: 14px;
+      background: #fff;
+      border: 1px solid #e2e8f0;
+      border-radius: 14px;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+    }
+
+    .admin-elder-profile {
+      display: grid;
+      grid-template-columns: 54px 1fr;
+      gap: 11px;
+      align-content: start;
+    }
+
+    .admin-elder-avatar {
+      display: grid;
+      place-items: center;
+      width: 54px;
+      height: 54px;
+      color: #fff;
+      background: #07394f;
+      border-radius: 50%;
+      font-size: 24px;
+      font-weight: 900;
+    }
+
+    .admin-elder-profile h3,
+    .admin-suggestion-block h3,
+    .admin-mini-section h3 {
+      margin: 0;
+      color: #1a1a2e;
+      font-size: 22px;
+      line-height: 1.18;
+    }
+
+    .admin-elder-profile p,
+    .admin-suggestion-block p,
+    .admin-mini-section p {
+      margin: 5px 0 0;
+      color: #718096;
+      font-size: 16px;
+      line-height: 1.36;
+    }
+
+    .admin-suggestion-block {
+      display: grid;
+      gap: 9px;
+      padding: 14px;
+      color: #2d3748;
+      background: #ebf8ff;
+      border-left: 5px solid #3182ce;
+      border-radius: 12px;
+    }
+
+    .admin-suggestion-block h3,
+    .admin-suggestion-block p {
+      color: #1a1a2e;
+    }
+
+    .admin-suggestion-block .script {
+      padding: 11px;
+      color: #1a1a2e;
+      background: #fff;
+      border: 1px solid #e2e8f0;
+      border-radius: 10px;
+      font-size: 17px;
+      font-weight: 900;
+      line-height: 1.35;
+    }
+
+    .admin-suggestion-block .safety {
+      padding: 10px;
+      color: #9a661e;
+      background: #fffaf0;
+      border-left: 5px solid #dd6b20;
+      border-radius: 10px;
+      font-size: 16px;
+      font-weight: 900;
+      line-height: 1.35;
+    }
+
+    .admin-mini-section {
+      display: grid;
+      gap: 9px;
+      align-content: start;
+      padding: 12px;
+      background: #f7fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+    }
+
+    .admin-mini-list {
+      display: grid;
+      gap: 8px;
+    }
+
+    .admin-mini-item {
+      padding: 10px;
+      background: #fff;
+      border: 1px solid #e2e8f0;
+      border-radius: 10px;
+    }
+
+    .admin-mini-item strong {
+      display: block;
+      color: #1a1a2e;
+      font-size: 17px;
+      line-height: 1.25;
+    }
+
+    .admin-mini-item span {
+      display: block;
+      margin-top: 4px;
+      color: #4a5568;
+      font-size: 15px;
+      line-height: 1.36;
+    }
+
+    @media (max-width: 1040px) {
+      .admin-elder-row {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .family-topbar,
+      .admin-topbar {
+        align-items: flex-start;
+      }
+
+      .family-photo-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .admin-topbar {
+        flex-direction: column;
+      }
+
+      .admin-actions,
+      .admin-actions .primary-button,
+      .admin-actions .ghost-button {
+        width: 100%;
+      }
+
+      .admin-metric-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .admin-elder-row {
+        grid-template-columns: 1fr;
+      }
+    }
   </style>
 </head>
 <body>
@@ -2438,12 +3616,17 @@
     <main class="main">
       <header class="topbar">
         <div>
-          <h1 id="pageTitle">今日任务</h1>
-          <p id="pageSubtitle">先听，再做。</p>
+          <h1 id="pageTitle">当前任务</h1>
+          <p id="pageSubtitle">陈晓岚 · 早班</p>
         </div>
         <div class="topbar-actions">
           <span class="sync-pill" id="topSync">离线缓存可用 · 09:22</span>
           <button class="ghost-button" type="button" id="simulatePending">模拟弱网</button>
+          <button class="caregiver-staff-toggle" type="button" id="caregiverStaffToggle" aria-label="切换熟手或新同事模式">
+            <span class="active" data-staff-mode="normal">熟手</span>
+            <span data-staff-mode="new">新同事</span>
+          </button>
+          <button class="caregiver-handover-button" type="button" id="caregiverHandoverButton">交接班</button>
           <button class="ghost-button" type="button" id="caregiverLogoutButton">退出</button>
         </div>
       </header>
@@ -2743,6 +3926,17 @@
           </div>
         </section>
 
+        <section class="view" id="view-elders" aria-labelledby="caregiverEldersHeading">
+          <div class="caregiver-page-head">
+            <div>
+              <h2 id="caregiverEldersHeading">看老人</h2>
+              <p>快速看偏好、禁忌和最近情况。</p>
+            </div>
+            <span class="tag status" id="caregiverElderCount">0 位</span>
+          </div>
+          <div class="caregiver-elder-list" id="caregiverElderList"></div>
+        </section>
+
         <section class="view" id="view-evidence" aria-labelledby="evidenceHeading">
           <div class="two-column">
             <div class="evidence-panel">
@@ -2937,12 +4131,35 @@
     </div>
   </div>
 
-  <nav class="mobile-nav hidden" id="mobileNav" aria-label="移动端导航">
-    <button class="nav-button active" data-view="today" type="button"><span class="nav-icon">T</span><span>Today</span></button>
-    <button class="nav-button" data-view="action" type="button"><span class="nav-icon">A</span><span>行动</span></button>
-    <button class="nav-button" data-view="why" type="button"><span class="nav-icon">W</span><span>依据</span></button>
-    <button class="nav-button" data-view="feedback" type="button"><span class="nav-icon">F</span><span>反馈</span></button>
-    <button class="nav-button" data-view="evidence" type="button"><span class="nav-icon">E</span><span>画像</span></button>
+  <div class="caregiver-drawer-overlay hidden" id="caregiverHandoverOverlay" role="dialog" aria-modal="true" aria-labelledby="handoverTitle">
+    <div class="caregiver-drawer">
+      <div class="caregiver-drawer-head">
+        <div>
+          <h2 class="caregiver-drawer-title" id="handoverTitle">交接班</h2>
+          <p class="caregiver-drawer-subtitle">说一句关键情况，系统先帮你记下。</p>
+        </div>
+        <button class="drawer-close-button" type="button" id="closeHandoverDrawer" aria-label="关闭交接班">×</button>
+      </div>
+      <div class="handover-record-area">
+        <button class="handover-mic-button" type="button" id="handoverMicButton">话</button>
+        <div class="handover-hint" id="handoverHint">点一下说话。也可以直接打字。</div>
+      </div>
+      <div class="handover-form">
+        <select id="handoverElderSelect" aria-label="选择老人"></select>
+        <textarea id="handoverNoteInput" placeholder="例：周阿姨今天一直找围巾，先让她看到围巾再洗漱。"></textarea>
+        <button class="primary-button" type="button" id="saveHandoverNote">记下来</button>
+      </div>
+      <div class="handover-saved-list" id="handoverSavedList"></div>
+    </div>
+  </div>
+
+  <div class="caregiver-drawer-overlay hidden" id="caregiverElderDrawerOverlay" role="dialog" aria-modal="true" aria-labelledby="caregiverElderDrawerTitle">
+    <div class="caregiver-drawer" id="caregiverElderDrawer"></div>
+  </div>
+
+  <nav class="mobile-nav caregiver-bottom-nav hidden" id="mobileNav" aria-label="护工端底部导航">
+    <button class="nav-button active" data-view="today" type="button"><span class="nav-icon">今</span><span>任务</span></button>
+    <button class="nav-button" data-view="elders" type="button"><span class="nav-icon">人</span><span>看老人</span></button>
   </nav>
 
   <script>
@@ -3186,7 +4403,11 @@
       profileGenerating: false,
       profileNotice: "",
       weakNetwork: false,
-      feedbackSubmitted: false
+      feedbackSubmitted: false,
+      staffMode: "normal",
+      handoverNotes: [],
+      handoverRecognition: null,
+      handoverRecording: false
     };
 
     const pageMeta = {
@@ -3195,6 +4416,7 @@
       why: ["为什么", "看来源。"],
       feedback: ["反馈", "点一下就交。"],
       evidence: ["老人画像", "偏好、禁忌、最近情况。"],
+      elders: ["看老人", "偏好、禁忌、最近情况。"],
       admin: ["管理演示", "故事书、经验库、待确认。"]
     };
 
@@ -3203,6 +4425,7 @@
     const API_BASES = [
       window.CAREACTION_API_BASE,
       (location.protocol === "http:" || location.protocol === "https:") ? location.origin : "",
+      "https://careaction-1.onrender.com",
       "http://127.0.0.1:3000",
       "http://localhost:3000",
       "http://192.168.31.142:3000"
@@ -3359,6 +4582,7 @@
             <strong>${suggestion.safety || task.safetyText}</strong>
           </div>
           <div class="warm-note">${task.reminder}</div>
+          ${state.staffMode === "new" ? `<div class="operator-newbie-note">给新同事：${elder.familySummary?.[0] || elder.preferenceTags?.[0] || "先称呼老人，再说明要做什么。"}</div>` : ""}
           <div class="tag-row">
             ${task.risks.map((risk) => `<span class="tag ${tagClass(risk)}">${risk}</span>`).join("")}
           </div>
@@ -3476,6 +4700,98 @@
       });
     }
 
+    function elderListValues() {
+      return Array.isArray(elders) ? elders : Object.values(elders || {});
+    }
+
+    function shortText(text, max = 28) {
+      if (!text) return "";
+      return text.length > max ? `${text.slice(0, max)}…` : text;
+    }
+
+    function renderCaregiverElders() {
+      const list = $("#caregiverElderList");
+      const count = $("#caregiverElderCount");
+      if (!list || !count) return;
+      const elderItems = elderListValues();
+      count.textContent = `${elderItems.length} 位`;
+      list.innerHTML = elderItems.map((elder) => {
+        const elderTasks = tasks.filter((task) => task.elderId === elder.id);
+        const nextTask = elderTasks.find((task) => task.status !== "已完成") || elderTasks[0];
+        const preferences = (elder.preferenceTags || []).slice(0, 3);
+        const cautions = (elder.avoidTags || []).slice(0, 2);
+        const observation = elder.observations?.[0]?.text || elder.familySummary?.[0] || "暂无新的补充。";
+        return `
+          <article class="caregiver-elder-card" data-elder-id="${elder.id}" role="button" tabindex="0" aria-label="查看${elder.name}">
+            <div class="caregiver-elder-head">
+              <div class="caregiver-elder-avatar">${elder.initial || elder.name?.[0] || "人"}</div>
+              <div>
+                <h3>${elder.name}</h3>
+                <p>${elder.room}房 · ${elder.age}岁 · ${nextTask ? `下一项 ${nextTask.time} ${nextTask.title}` : "暂无任务"}</p>
+              </div>
+            </div>
+            <p>${shortText(observation, 42)}</p>
+            <div class="caregiver-elder-tags">
+              ${preferences.map((tag) => `<span class="caregiver-elder-tag">${tag}</span>`).join("")}
+              ${cautions.map((tag) => `<span class="caregiver-elder-tag caution">${tag}</span>`).join("")}
+            </div>
+          </article>
+        `;
+      }).join("");
+      list.querySelectorAll("[data-elder-id]").forEach((card) => {
+        card.addEventListener("click", () => openCaregiverElderDetail(card.dataset.elderId));
+        card.addEventListener("keydown", (event) => {
+          if (event.key === "Enter" || event.key === " ") {
+            event.preventDefault();
+            openCaregiverElderDetail(card.dataset.elderId);
+          }
+        });
+      });
+    }
+
+    function openCaregiverElderDetail(elderId) {
+      const elder = elderListValues().find((item) => item.id === elderId);
+      if (!elder) return;
+      const elderTasks = tasks.filter((task) => task.elderId === elder.id);
+      const nextTask = elderTasks.find((task) => task.status !== "已完成") || elderTasks[0];
+      const drawer = $("#caregiverElderDrawer");
+      drawer.innerHTML = `
+        <div class="caregiver-drawer-head">
+          <div>
+            <h2 class="caregiver-drawer-title" id="caregiverElderDrawerTitle">${elder.name}</h2>
+            <p class="caregiver-drawer-subtitle">${elder.room}房 · ${elder.age}岁 · ${elder.status}</p>
+          </div>
+          <button class="drawer-close-button" type="button" id="closeElderDrawer" aria-label="关闭老人详情">×</button>
+        </div>
+        <div class="drawer-section">
+          <h3>下一件事</h3>
+          <p>${nextTask ? `${nextTask.time} · ${nextTask.title}：${nextTask.mainAction || nextTask.actionTitle}` : "暂无待执行任务。"}</p>
+        </div>
+        <div class="drawer-section">
+          <h3>记住她/他</h3>
+          <p>${elder.familySummary?.[0] || "先说明，再操作。"}</p>
+        </div>
+        <div class="drawer-section">
+          <h3>偏好</h3>
+          <div class="caregiver-elder-tags">${(elder.preferenceTags || []).map((tag) => `<span class="caregiver-elder-tag">${tag}</span>`).join("")}</div>
+        </div>
+        <div class="drawer-section">
+          <h3>禁忌</h3>
+          <div class="caregiver-elder-tags">${(elder.avoidTags || []).map((tag) => `<span class="caregiver-elder-tag caution">${tag}</span>`).join("")}</div>
+        </div>
+        <div class="drawer-section">
+          <h3>最近情况</h3>
+          <ul>${(elder.observations || []).slice(0, 4).map((item) => `<li>${item.time} · ${item.text}</li>`).join("")}</ul>
+        </div>
+      `;
+      $("#closeElderDrawer").addEventListener("click", closeCaregiverElderDetail);
+      $("#caregiverElderDrawerOverlay").classList.remove("hidden");
+    }
+
+    function closeCaregiverElderDetail() {
+      $("#caregiverElderDrawerOverlay").classList.add("hidden");
+    }
+
     function renderActionPreview() {
       const task = currentTask();
       const elder = currentElder();
@@ -3528,6 +4844,7 @@
 
     function stopLiveInteractions() {
       stopActionVoice();
+      stopCaregiverHandoverRecording();
       if (state.recognition) {
         try {
           state.recognition.abort();
@@ -3615,6 +4932,158 @@
         state.recognition = null;
       };
       recognition.start();
+    }
+
+    function populateCaregiverHandoverSelect() {
+      const select = $("#handoverElderSelect");
+      if (!select) return;
+      const current = currentElder();
+      select.innerHTML = elderListValues().map((elder) => (
+        `<option value="${elder.id}" ${elder.id === current.id ? "selected" : ""}>${elder.name} · ${elder.room}房</option>`
+      )).join("");
+    }
+
+    function openCaregiverHandover() {
+      populateCaregiverHandoverSelect();
+      $("#handoverNoteInput").value = "";
+      $("#handoverHint").textContent = "点一下说话。也可以直接打字。";
+      $("#caregiverHandoverOverlay").classList.remove("hidden");
+    }
+
+    function closeCaregiverHandover() {
+      stopCaregiverHandoverRecording();
+      $("#caregiverHandoverOverlay").classList.add("hidden");
+    }
+
+    function stopCaregiverHandoverRecording() {
+      state.handoverRecording = false;
+      const button = $("#handoverMicButton");
+      if (button) {
+        button.classList.remove("recording");
+        button.textContent = "话";
+      }
+      if (state.handoverRecognition) {
+        try {
+          state.handoverRecognition.abort();
+        } catch (error) {
+          console.warn("交接班语音停止失败。", error);
+        }
+        state.handoverRecognition = null;
+      }
+    }
+
+    function setHandoverTranscript(text) {
+      const input = $("#handoverNoteInput");
+      const value = String(text || "").trim();
+      if (!value) {
+        $("#handoverHint").textContent = "没有听清，可以再点一次。";
+        return;
+      }
+      input.value = value;
+      $("#handoverHint").textContent = "听到了，确认没问题就点“记下来”。";
+    }
+
+    function toggleCaregiverHandoverRecording() {
+      if (state.handoverRecording) {
+        stopCaregiverHandoverRecording();
+        return;
+      }
+      const button = $("#handoverMicButton");
+      state.handoverRecording = true;
+      button.classList.add("recording");
+      button.textContent = "听";
+      $("#handoverHint").textContent = "正在听，请说一句关键情况。";
+
+      if (window.plus && window.plus.speech && typeof window.plus.speech.startRecognize === "function") {
+        window.plus.speech.startRecognize(
+          { lang: "zh-cn", punctuation: false, timeout: 10000 },
+          (result) => {
+            stopCaregiverHandoverRecording();
+            setHandoverTranscript(result);
+          },
+          () => {
+            stopCaregiverHandoverRecording();
+            $("#handoverHint").textContent = "没有听清，可以直接打字。";
+          }
+        );
+        return;
+      }
+
+      const Recognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+      if (!Recognition) {
+        window.setTimeout(() => {
+          stopCaregiverHandoverRecording();
+          setHandoverTranscript("周阿姨今天一直找围巾，先让她看到围巾再洗漱。");
+        }, 900);
+        return;
+      }
+
+      const recognition = new Recognition();
+      recognition.lang = "zh-CN";
+      recognition.interimResults = false;
+      recognition.maxAlternatives = 1;
+      state.handoverRecognition = recognition;
+      recognition.onresult = (event) => {
+        const transcript = event.results[0][0].transcript.trim();
+        stopCaregiverHandoverRecording();
+        setHandoverTranscript(transcript);
+      };
+      recognition.onerror = () => {
+        stopCaregiverHandoverRecording();
+        $("#handoverHint").textContent = "没有听清，可以直接打字。";
+      };
+      recognition.onend = () => {
+        state.handoverRecording = false;
+        if (button) {
+          button.classList.remove("recording");
+          button.textContent = "话";
+        }
+      };
+      recognition.start();
+    }
+
+    function saveCaregiverHandover() {
+      const text = $("#handoverNoteInput").value.trim();
+      if (!text) {
+        $("#handoverHint").textContent = "先说一句或写一句，再保存。";
+        return;
+      }
+      const elderId = $("#handoverElderSelect").value || currentElder().id;
+      const elder = elderListValues().find((item) => item.id === elderId) || currentElder();
+      const time = new Date().toLocaleTimeString("zh-CN", { hour: "2-digit", minute: "2-digit" });
+      const note = { elderId: elder.id, elderName: elder.name, time, text };
+      state.handoverNotes = [note, ...state.handoverNotes].slice(0, 8);
+      elder.observations = [
+        { time: `今天 ${time}`, title: "交接班补充", text, tag: "交接" },
+        ...(elder.observations || [])
+      ].slice(0, 8);
+      $("#handoverSavedList").innerHTML = state.handoverNotes.slice(0, 4).map((item) => `
+        <div class="handover-saved-item"><strong>${item.elderName} · ${item.time}</strong><br>${item.text}</div>
+      `).join("");
+      $("#handoverNoteInput").value = "";
+      $("#handoverHint").textContent = "已记下。还可以继续说下一条。";
+      renderCaregiverElders();
+
+      const task = currentTask();
+      apiRequest("/api/feedback", {
+        method: "POST",
+        body: JSON.stringify({
+          task_id: task.id,
+          elder_id: elder.id,
+          effect: "交接班",
+          observations: ["交接班补充"],
+          voice_note: text,
+          note: text
+        })
+      }).then(() => {
+        state.apiOnline = true;
+        state.weakNetwork = false;
+        updateSyncUI();
+      }).catch((error) => {
+        state.weakNetwork = true;
+        updateSyncUI();
+        console.warn("交接班记录未写入数据库，已保留本地状态。", error);
+      });
     }
 
     function renderActionCard() {
@@ -4084,6 +5553,7 @@
       renderStats();
       renderTaskList();
       renderActionCard();
+      renderCaregiverElders();
       if (state.loggedInRole === "caregiver") {
         renderActionPreview();
         renderWhy();
@@ -4172,6 +5642,26 @@
     $("#familyLogoutButton").addEventListener("click", showLogin);
     $("#adminLogoutButton").addEventListener("click", showLogin);
     $("#caregiverLogoutButton").addEventListener("click", showLogin);
+
+    $("#caregiverStaffToggle").addEventListener("click", (event) => {
+      const clickedMode = event.target?.dataset?.staffMode;
+      state.staffMode = clickedMode || (state.staffMode === "normal" ? "new" : "normal");
+      $$("#caregiverStaffToggle [data-staff-mode]").forEach((item) => {
+        item.classList.toggle("active", item.dataset.staffMode === state.staffMode);
+      });
+      renderTaskList();
+    });
+
+    $("#caregiverHandoverButton").addEventListener("click", openCaregiverHandover);
+    $("#closeHandoverDrawer").addEventListener("click", closeCaregiverHandover);
+    $("#handoverMicButton").addEventListener("click", toggleCaregiverHandoverRecording);
+    $("#saveHandoverNote").addEventListener("click", saveCaregiverHandover);
+    $("#caregiverHandoverOverlay").addEventListener("click", (event) => {
+      if (event.target === $("#caregiverHandoverOverlay")) closeCaregiverHandover();
+    });
+    $("#caregiverElderDrawerOverlay").addEventListener("click", (event) => {
+      if (event.target === $("#caregiverElderDrawerOverlay")) closeCaregiverElderDetail();
+    });
 
     $("#completeTaskButton").addEventListener("click", showCareCompleteModal);
     $("#completeFromToday").addEventListener("click", showCareCompleteModal);
